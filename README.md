@@ -1,9 +1,15 @@
-# LCD Scrolling
+LCD Scrolling
+=========
 
 This is a very simple module meant to be used with Johnny-five on your arduino/Raspberry Pie project.
 The module detect if your text is bigger than the space offered by your LCD. If it's bigger the module will apply a sort of scrolling effect on the text so all the information is displayed and readeable.
 
 This module remain very simple and don't offer many features yet but feel free to post pull request. I'll extend this module with multiple animation in the future.
+
+## Installation
+```bash
+npm install lcd_scrolling --save
+```
 
 ## Example
 
@@ -50,3 +56,9 @@ board.on("ready", function() {
 
 });
 ```
+
+## Contributing
+Feel free to post pull requests if you think your addition is relevant to the module.
+
+## Release History
+* 1.0.0 - Initial release
