@@ -1,6 +1,6 @@
 {
   "name": "lcd-scrolling",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a scrolling effect on the text displayed on LCD. ( 'used w/ arduino or Raspberry Pie' )",
   "main": "index.js",
   "scripts": {
