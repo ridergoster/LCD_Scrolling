@@ -12,6 +12,7 @@ npm install lcd_scrolling --save
 ```
 
 ## Example
+Example based on [johnny-five's LCD wiki page](https://github.com/rwaldron/johnny-five/wiki/LCD)
 
 ```javascript
 var five = require("johnny-five"),
