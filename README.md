@@ -6,6 +6,7 @@ The module detect if your text is bigger than the space offered by your LCD. If 
 This module remain very simple and don't offer many features yet but feel free to post pull request. I'll extend this module with multiple animation in the future.
 
 ## Example
+Example based on [johnny-five's LCD wiki page](https://github.com/rwaldron/johnny-five/wiki/LCD)
 
 ```javascript
 var five = require("johnny-five"),
