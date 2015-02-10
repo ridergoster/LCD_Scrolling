@@ -8,7 +8,7 @@ This module remain very simple and don't offer many features yet but feel free t
 
 ## Installation
 ```bash
-npm install lcd_scrolling --save
+npm install lcd-scrolling --save
 ```
 
 ## Example
@@ -16,7 +16,7 @@ Example based on [johnny-five's LCD wiki page](https://github.com/rwaldron/johnn
 
 ```javascript
 var five = require("johnny-five"),
-    scroll = require('LCD_Scrolling'),
+    scroll = require('lcd-scrolling'),
     board, lcd;
 
 board = new five.Board();
