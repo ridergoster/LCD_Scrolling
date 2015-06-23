@@ -2,7 +2,8 @@ var lcd,
     messages,
     lcd_info,
     anim_settings,
-    debug;
+    debug,
+    timeout;
 
 /**
  *  Setup the lcd object we need to
@@ -93,7 +94,7 @@ function anim( _line ){
         progress( _line );
 
         (function( _line ){
-            setTimeout(function(){
+            timeout = setTimeout(function(){
                 anim( _line )
             }, anim_settings.firstCharPauseDuration );
         })( _line );
@@ -112,7 +113,7 @@ function anim( _line ){
                 time = anim_settings.lastCharPauseDuration;
             }
 
-            setTimeout( function(){
+            timeout = setTimeout( function(){
                 anim( _line );
             }, time );
 
@@ -175,5 +176,11 @@ module.exports.line = function( _line, _message ){
         anim( _line );
 
     }
+},
 
+module.exports.clear = function() {
+    if (lcd) {
+        clearTimeout(timeout);
+        lcd.clear();    
+    }    
 }
