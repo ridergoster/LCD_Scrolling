@@ -181,6 +181,7 @@ module.exports.line = function( _line, _message ){
 module.exports.clear = function() {
     if (lcd) {
         clearTimeout(timeout);
-        lcd.clear();    
+        lcd.clear();
+        messages = [];
     }    
 }
