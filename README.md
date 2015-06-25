@@ -54,6 +54,8 @@ board.on("ready", function() {
     
     scroll.line( 0, "Text of the first line" );
     scroll.line( 1, "Second line here" );
+    
+    // scroll.clear() will clear all lines on your LCD
 
 });
 ```
