@@ -62,4 +62,5 @@ board.on("ready", function() {
 Feel free to post pull requests if you think your addition is relevant to the module.
 
 ## Release History
+* 1.0.2 - Clear method added by [jessewang-arvatosystems](https://github.com/jessewang-arvatosystems)
 * 1.0.0 - Initial release
