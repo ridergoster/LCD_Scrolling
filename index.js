@@ -20,7 +20,7 @@ module.exports.setup = function( _obj ){
 
     /* each item of the array is a line */
     messages = [];
-
+    timeout = [];
     /* Some basic info we could get from the lcd object actually */
     lcd_info = {
         char_length: _obj.char_length || 16, /* Number of characters per line */
@@ -94,7 +94,7 @@ function anim( _line ){
         progress( _line );
 
         (function( _line ){
-            timeout = setTimeout(function(){
+            timeout[_line] = setTimeout(function(){
                 anim( _line )
             }, anim_settings.firstCharPauseDuration );
         })( _line );
@@ -113,7 +113,7 @@ function anim( _line ){
                 time = anim_settings.lastCharPauseDuration;
             }
 
-            timeout = setTimeout( function(){
+            timeout[_line] = setTimeout( function(){
                 anim( _line );
             }, time );
 
@@ -172,6 +172,7 @@ module.exports.line = function( _line, _message ){
             }
 
         }
+        clearTimeout(timeout[_line]);
 
         anim( _line );
 
@@ -180,8 +181,9 @@ module.exports.line = function( _line, _message ){
 
 module.exports.clear = function() {
     if (lcd) {
-        clearTimeout(timeout);
+        clearTimeout(timeout[0]);
+        clearTimeout(timeout[1]);
         lcd.clear();
         messages = [];
-    }    
+    }
 }
